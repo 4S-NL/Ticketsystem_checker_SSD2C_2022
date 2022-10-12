@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use \App\Http\Controllers\EventsController;
+use \App\Http\Controllers\EventController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('events', EventsController::class);
+Route::resource('events', EventController::class);
 
 Route::get('/pannekoek', function() {
     return view('pannekoek');
