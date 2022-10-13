@@ -31,6 +31,7 @@
             <th>Start datum</th>
             <th>Eind datum</th>
             <th>Aantal tickets</th>
+            <th>Prijs</th>
             <th width="280px">Actie</th>
         </tr>
         </thead>
@@ -42,6 +43,7 @@
                 <td>{{ $event->start_date }}</td>
                 <td>{{ $event->end_date }}</td>
                 <td>{{ $event->capacity }}</td>
+                <td>{{ $event->price }}</td>
                 <td>
                     <form action="{{ route('events.destroy',$event->id) }}" method="Post">
                         <a class="btn btn-primary" href="{{ route('events.edit',$event->id) }}">Bewerk</a>
