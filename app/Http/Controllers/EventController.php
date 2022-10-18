@@ -45,6 +45,7 @@ class EventController extends Controller
             'start_date' => 'required',
             'end_date' => 'required',
             'capacity' => 'required',
+            'price' => 'required'
         ]);
 
         Event::create($request->post());
