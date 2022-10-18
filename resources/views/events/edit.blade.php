@@ -93,6 +93,17 @@
                     @enderror
                 </div>
             </div>
+
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="form-group">
+                    <strong>Prijs</strong>
+                    <input type="text" name="price" value="{{ $event->price }}" class="form-control" placeholder="Prijs per ticket">
+                    @error('price')
+                    <div class="alert alert-danger mt-1 mb-1">{{ $message }}</div>
+                    @enderror
+                </div>
+            </div>
+
             <button type="submit" class="btn btn-primary ml-3">Submit</button>
         </div>
     </form>

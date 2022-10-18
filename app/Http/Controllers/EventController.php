@@ -92,6 +92,7 @@ class EventController extends Controller
             'start_date' => 'required',
             'end_date' => 'required',
             'capacity' => 'required',
+            'price' => 'required'
         ]);
 
         $event->fill($request->post())->save();
