@@ -19,6 +19,17 @@ class EventController extends Controller
     }
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function publicindex()
+    {
+        $events = Event::orderBy('id','desc')->get();
+        return view ('events.publicindex', compact('events'));
+    }
+
+    /**
      * Show the form for creating a new resource.Q
      *
      * @return \Illuminate\Http\Response
