@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Route::resource('events', EventController::class)->middleware(['auth']);
 
+Route::get('/publicevents', [EventController::class, 'publicindex']);
+
 Route::get('/pannekoek', function() {
     return view('pannekoek');
 })->middleware(['auth']);
