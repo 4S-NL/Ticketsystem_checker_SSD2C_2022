@@ -17,7 +17,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('events', EventController::class);
+Route::resource('events', EventController::class)->middleware(['auth']);
 
 Route::get('/pannekoek', function() {
     return view('pannekoek');
