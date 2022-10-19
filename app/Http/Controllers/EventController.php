@@ -122,4 +122,9 @@ class EventController extends Controller
         $event->delete();
         return redirect()->route('events.index')->with('succes', 'Evenement is verwijderd');
     }
+
+    public function checkout(Event $event) {
+
+    }
+
 }

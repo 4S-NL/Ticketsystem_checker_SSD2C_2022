@@ -20,10 +20,8 @@ Route::get('/', function () {
 Route::resource('events', EventController::class)->middleware(['auth']);
 
 Route::get('/publicevents', [EventController::class, 'publicindex']);
+Route::get('publicevents/{event}/checkout', [EventController::class, 'checkout'])->name('publicevents.checkout');
 
-Route::get('/pannekoek', function() {
-    return view('pannekoek');
-})->middleware(['auth']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

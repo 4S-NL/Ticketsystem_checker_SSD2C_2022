@@ -38,6 +38,7 @@
                 <td>{{ $event->capacity }}</td>
                 <td>{{ $event->price }}</td>
                 <td>
+                    <a href="{{ route('publicevents.checkout', $event) }}" class="btn btn-info">Koop Tickets</a>
                 </td>
             </tr>
         @endforeach
