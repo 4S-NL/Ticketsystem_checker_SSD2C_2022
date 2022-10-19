@@ -25,7 +25,8 @@
             {{ session('status') }}
         </div>
     @endif
-    <form action="" >
+    <form action="{{route('publicevents.storeCheckout', $event)}}" method="POST" >
+        @csrf
         <div class="form-group">
             <label for="">Hoeveel tickets wilt u bestellen?</label>
             <input type="number" class="form-control" name="amount_tickets">

@@ -127,4 +127,8 @@ class EventController extends Controller
         return view('events.checkout', compact('event'));
     }
 
+    public function storeCheckout(Event $event) {
+
+    }
+
 }

@@ -21,6 +21,7 @@ Route::resource('events', EventController::class)->middleware(['auth']);
 
 Route::get('/publicevents', [EventController::class, 'publicindex'])->name('publicevents.index');
 Route::get('publicevents/{event}/checkout', [EventController::class, 'checkout'])->name('publicevents.checkout');
+Route::post('publicevents/{event}/checkout', [EventController::class, 'storeCheckout'])->name('publicevents.storeCheckout');
 
 
 Route::get('/dashboard', function () {
