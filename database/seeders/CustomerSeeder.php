@@ -23,7 +23,12 @@ class CustomerSeeder extends Seeder
             'address' => 'Terheijdenseweg 350',
             'birth_date' => '1900-01-01',
             'phone' => '0612345678',
-            'user_id' => '1'
+            'user_id' => User::inRandomOrder()->first()->id
         ]);
+
+
+
+
+
     }
 }
