@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Customer;
+use App\Models\User;
+
 
 class CustomerSeeder extends Seeder
 {
@@ -16,8 +18,6 @@ class CustomerSeeder extends Seeder
     public function run()
     {
         Customer::create([
-            'firstname' => 'Piet',
-            'lastname' => 'Hein',
             'city' => 'Breda',
             'zipcode' => '4826AA',
             'address' => 'Terheijdenseweg 350',
