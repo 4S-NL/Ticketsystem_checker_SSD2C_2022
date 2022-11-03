@@ -16,6 +16,10 @@ return new class extends Migration
         Schema::create('customers', function (Blueprint $table) {
             $table->id();
             $table->string('city');
+            $table->string('firstname');
+            $table->string('insertion')->nullable();
+            $table->string('lastname');
+            $table->string('email');
             $table->string('zipcode');
             $table->string('address');
             $table->date('birth_date');

@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use App\Models\Event;
+use App\Models\Order;
 use Illuminate\Http\Request;
 
 class EventController extends Controller
@@ -127,7 +129,20 @@ class EventController extends Controller
         return view('events.checkout', compact('event'));
     }
 
-    public function storeCheckout(Event $event) {
+    public function storeCheckout(Request $request, Event $event) {
+        // alles uit het form valideren (later)
+
+
+        // alle gegevens uit het form moeten ergens opgeslagen worden
+            // - een customer moet opgeslagen worden V
+            $customer = Customer::create( $request->except(['_token', 'amount_tickets']) );
+            // - een nieuwe order moet opgeslagen worden
+            $order = Order::create([
+                'customer_id' => $customer->id
+            ]);
+            // - een of meerdere tickets opslaan in database. Op basis van ingevulde form
+        // een confirm pagina tonen met daarop de bestelde data
+        // - een mail sturen naar de klant met de bestelde tickets in PDF
 
     }
 

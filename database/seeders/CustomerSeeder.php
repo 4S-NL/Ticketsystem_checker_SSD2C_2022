@@ -20,6 +20,9 @@ class CustomerSeeder extends Seeder
         Customer::create([
             'city' => 'Breda',
             'zipcode' => '4826AA',
+            'firstname' => 'Jantje',
+            'lastname' => 'Klaassen',
+            'email' => 'jantjeklaassen@gmail.com',
             'address' => 'Terheijdenseweg 350',
             'birth_date' => '1900-01-01',
             'phone' => '0612345678',

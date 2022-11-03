@@ -21,6 +21,7 @@ return new class extends Migration
 
         Schema::table('customers', function (Blueprint $table) {
             $table->foreignId('user_id')
+                ->nullable()
                 ->references('id')
                 ->on('users');
         });
