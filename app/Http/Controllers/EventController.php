@@ -146,4 +146,24 @@ class EventController extends Controller
 
     }
 
+    //return all events. No view = default json output
+    public function apiIndex()
+    {
+        $events = Event::orderBy('id','desc')->get();
+
+        return $events;
+    }
+
+    //return 1 event based on id
+    public function apiEvent($id)
+    {
+        $event = Event::find($id);
+        return $event;
+    }
+
+    //return 1 event based on event
+    public function apiEvent1(Event $event)
+    {
+        return $event;
+    }
 }
